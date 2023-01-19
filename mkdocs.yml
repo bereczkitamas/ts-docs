@@ -1,0 +1,124 @@
+site_name: Thot-Soft Developer Policies and Guides
+site_url: https://developer.thot-soft.com/documentation
+repo_url: https://bitbucket.org/felleskatalogen/semmi
+
+theme:
+  name: material
+  logo: https://thot-soft.com/sites/dev/themes/thot-soft-web-theme/logo.png
+  features:
+    #    - navigation.expand # Expand all sections by default in navigation
+    - navigation.top # Enable back to top button
+    - navigation.tracking
+    - navigation.instant
+    - navigation.tabs
+
+  palette:
+      scheme: default
+      primary: blue
+      accent: indigo
+  icon:
+    admonition:
+      example: fontawesome/solid/list
+
+nav: # Navigation chapter name map with ordering
+  - Általános:
+    - Projektjeink: index.md
+    - Csapatok:
+      - Feladatkörök: index.md
+      - Csapat vezetés: index.md
+      - Felelősségek: index.md
+    - Fejlesztés: index.md
+    - Eszközök: index.md
+    - Ramp Up: index.md
+    - Roadmapek: index.md
+    - Egyéni fejlődés: index.md
+  - Fejlesztői útmutató:
+    - Munkaidő felvitele: policy/munkaido.md
+    - IntelliJ: policy/intellij.md
+    - Redmine áttekintés: policy/redmine.md
+    - Ticket készítés: policy/ticket.md
+    - Dokumentációk helye: policy/dokumentaciok.md
+    - Definition of Done: policy/dod.md
+    - Code Review: policy/code-review.md
+    - Kód dokumentálás: policy/kod-dokumentalas.md
+    - Projekt vezetés: policy/projekt-vezetes.md
+    - Kód refaktorálás: policy/code-refactoring.md
+  - Projekt irányelvek:
+    - GIT kezelés: guide/git.md
+    - Design irányelvek:
+      - SOLID irányelv: guide/solid.md
+      - DRY irányelv: guide/solid.md
+      - Hollywood irányelv: guide/solid.md
+    - Dokumentáció: guide/documentation.md
+    - Environments: guide/environments.md
+    - Dependencies: guide/dependencies.md
+    - Testing: guide/testing.md
+    - Structure and Naming: guide/structure-and-naming.md
+    - Code style: guide/code-style.md
+    - Logging: guide/logging.md
+    - API:
+      - API design: guide/api/design.md
+      - API security: guide/api/security.md
+      - API documentation: guide/api/documentation.md
+    - Accessibility: guide/accessibility.md
+    - "CI/CD: Jenkins": guide/jenkins.md
+  - Quickstarts:
+    - Spring project: quickstart/spring-boot.md
+    - Angular app: quickstart/angular.md
+    - Keycloak: quickstart/keycloak.md
+    - Jenkins pipeline: quickstart/jenkins-pipeline.md
+    - Rancher template: quickstart/rancher-template.md
+    - Helm chart: quickstart/helm-chart.md
+  - Haladó leírások:
+    - Upgrading Angular: advanced/upgrade-angular
+    - Upgrading Java: advanced/upgrade-java
+  - Oldalak szerkesztése: how-to-edit-docs.md
+
+markdown_extensions:
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+          # Annotations
+  - attr_list
+  - md_in_html
+
+  # Footnotes
+  - footnotes
+
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # Lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables # Data tables
+
+  # Metadata
+  - meta
+
+  # Abbreviations
+  - abbr
+
+
+  - toc:
+      permalink: true
